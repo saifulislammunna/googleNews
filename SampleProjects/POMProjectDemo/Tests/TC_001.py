@@ -1,13 +1,20 @@
 import time
 
 from selenium import webdriver
+# from SampleProjects.POMProjectDemo.Pages.homePage import HomePage
+import unittest
+class LOginTest(unittest.TestCase):
 
-driver = webdriver.Chrome(executable_path="E:\selenium-chrome-driver\chromedriver")
+       @classmethod
+       def setUpClass(cls):
+           cls.driver = webdriver.Chrome(executable_path="E:\selenium-chrome-driver\chromedriver")
+           cls.driver.maximize_window()
 
 
-driver.maximize_window()
-driver.get("https://news.google.com/topstories?hl=en-US&gl=US&ceid=US:en")
+       def test_001(self):
+            self.driver.get("https://news.google.com/topstories?hl=en-US&gl=US&ceid=US:en")
+            time.sleep(2)
 
-time.sleep(2)
-
-driver.quit()
+       @classmethod
+       def tearDownClass(cls):
+             cls.driver.quit()
