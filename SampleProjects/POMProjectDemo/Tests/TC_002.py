@@ -1,13 +1,14 @@
+
 import time
 
 from selenium import webdriver
 # from SampleProjects.POMProjectDemo.Pages.homePage import HomePage
 import unittest
-
+from SampleProjects.POMProjectDemo.Pages.featuredTopic import FeaturedTopic
 from selenium.webdriver.common.by import By
 
 
-class LOginTest(unittest.TestCase):
+class FeaturedTest(unittest.TestCase):
 
        @classmethod
        def setUpClass(cls):
@@ -19,11 +20,6 @@ class LOginTest(unittest.TestCase):
             self.driver.get("https://news.google.com/topstories?hl=en-US&gl=US&ceid=US:en")
             time.sleep(2)
 
-       # def test_0021(self):
-       #     self.driver.find_element(By.XPATH,
-       #                              "//*[@id='gb']/div[2]/div[2]/div/form/div[1]/div/div/div/div/div[1]/input[2]").click()
-       #     time.sleep(2)
-
-       @classmethod
-       def tearDownClass(cls):
-             cls.driver.quit()
+       def test_0021(self):
+           self.featured = FeaturedTopic()
+           time.sleep(5)
