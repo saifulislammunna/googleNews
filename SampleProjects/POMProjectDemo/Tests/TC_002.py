@@ -17,9 +17,15 @@ class FeaturedTest(unittest.TestCase):
 
 
        def test_001(self):
-            self.driver.get("https://news.google.com/topstories?hl=en-US&gl=US&ceid=US:en")
-            time.sleep(2)
+           self.driver.get("https://news.google.com/topstories?hl=en-US&gl=US&ceid=US:en")
+           time.sleep(2)
 
        def test_0021(self):
-           self.featured = FeaturedTopic()
-           time.sleep(5)
+           # self.driver.find_element(By.XPATH,"//*[@id='gb']/div[2]/div[2]/div/form/div[1]/div/div/div/div/div[1]/input[2]").click()
+           home_page = FeaturedTopic(self.driver)
+           searchClick = home_page.click_topic().click()
+           return searchClick
+
+       # @classmethod
+       # def tearDownClass(cls):
+       #        cls.driver.quit()

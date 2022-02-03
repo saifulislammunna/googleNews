@@ -7,7 +7,7 @@ import unittest
 from selenium.webdriver.common.by import By
 
 
-class LOginTest(unittest.TestCase):
+class BasePage(object):
 
        @classmethod
        def setUpClass(cls):
@@ -15,7 +15,7 @@ class LOginTest(unittest.TestCase):
            cls.driver.maximize_window()
 
 
-       def test_001(self):
+       def __init__(self):
             self.driver.get("https://news.google.com/topstories?hl=en-US&gl=US&ceid=US:en")
             time.sleep(2)
 
@@ -24,6 +24,6 @@ class LOginTest(unittest.TestCase):
        #                              "//*[@id='gb']/div[2]/div[2]/div/form/div[1]/div/div/div/div/div[1]/input[2]").click()
        #     time.sleep(2)
 
-       @classmethod
-       def tearDownClass(cls):
-             cls.driver.quit()
+       # @classmethod
+       # def tearDownClass(cls):
+       #       cls.driver.quit()

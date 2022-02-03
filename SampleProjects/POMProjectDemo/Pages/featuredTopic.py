@@ -1,12 +1,13 @@
 from selenium.webdriver.common.by import By
-from SampleProjects.POMProjectDemo.Locators.locator import Locators
+from SampleProjects.POMProjectDemo.Locators.locator import *
+from SampleProjects.POMProjectDemo.Tests.TC_001 import BasePage
 
-class FeaturedTopic():
-
-    # def __init__(self, driver):
-    #     self.driver = driver
-    #
+class FeaturedTopic(BasePage):
+    def __init__(self, driver):
+        self.driver = driver
+        self.locator = Locators
 
 
     def click_topic(self):
-        self.driver.find_element(By.XPATH, Locators.featured_topic_xpath).click()
+       search = self.driver.find_element(*self.locator.featured_topic_xpath)
+       return search
