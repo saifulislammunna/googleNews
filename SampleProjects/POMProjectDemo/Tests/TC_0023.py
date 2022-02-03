@@ -7,7 +7,7 @@ import unittest
 from SampleProjects.POMProjectDemo.Pages.narrowSearch import NarrowSearch
 
 
-class FeaturedTest(unittest.TestCase):
+class NarrowTest(unittest.TestCase):
 
        @classmethod
        def setUpClass(cls):

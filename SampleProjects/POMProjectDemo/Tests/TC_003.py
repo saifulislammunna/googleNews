@@ -6,7 +6,7 @@ import unittest
 from SampleProjects.POMProjectDemo.Pages.headlineFollow import HeadlineFollow
 
 
-class FeaturedTest(unittest.TestCase):
+class HeadlineTest(unittest.TestCase):
 
        @classmethod
        def setUpClass(cls):
