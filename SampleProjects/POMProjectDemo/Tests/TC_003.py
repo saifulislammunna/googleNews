@@ -1,10 +1,9 @@
-
 import time
 
 from selenium import webdriver
 # from SampleProjects.POMProjectDemo.Pages.homePage import HomePage
 import unittest
-from SampleProjects.POMProjectDemo.Pages.narrowSearch import NarrowSearch
+from SampleProjects.POMProjectDemo.Pages.headlineFollow import HeadlineFollow
 
 
 class FeaturedTest(unittest.TestCase):
@@ -19,6 +18,7 @@ class FeaturedTest(unittest.TestCase):
            self.driver.get("https://news.google.com/topstories?hl=en-US&gl=US&ceid=US:en")
            time.sleep(2)
 
-       def test_0023(self):
-           confined = NarrowSearch(self.driver)
-           confined.narrow_search().click()
+       def test_003(self):
+           headline = HeadlineFollow(self.driver)
+           headline.headline_follow().click()
+

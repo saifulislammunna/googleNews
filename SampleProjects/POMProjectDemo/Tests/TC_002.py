@@ -30,7 +30,9 @@ class FeaturedTest(unittest.TestCase):
        def test_0022(self):
             news = LatestNews(self.driver)
             news.latest_news().click()
+            time.sleep(2)
 
+      
        # @classmethod
        # def tearDownClass(cls):
        #        cls.driver.quit()
