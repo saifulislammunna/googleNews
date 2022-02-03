@@ -1,15 +1,15 @@
 import time
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-# from SampleProjects.POMProjectDemo.Pages.homePage import HomePage
+
+
 import unittest
 
 
 
 from SampleProjects.POMProjectDemo.Pages.headlineFollow import HeadlineFollow
 from SampleProjects.POMProjectDemo.Pages.shareLink import ShareLink
-from SampleProjects.POMProjectDemo.Pages.copyLink import CopyLink
+from SampleProjects.POMProjectDemo.Pages.facebookLink import FacebookLink
 class ShareTest(unittest.TestCase):
 
        @classmethod
@@ -31,17 +31,8 @@ class ShareTest(unittest.TestCase):
 
            share = ShareLink(self.driver)
            share.share_link().click()
+           time.sleep(7)
+       def test_003122(self):
+           facebook = FacebookLink(self.driver)
+           facebook.facebook_link().click()
            time.sleep(5)
-
-       def test_00313(self):
-           copy = CopyLink(self.driver)
-           copy.copy_link().click()
-           time.sleep(5)
-
-       def test_00314(self):
-           self.driver.execute_script("window.open('');")
-           time.sleep(5)
-           self.driver.switch_to.window(self.driver.window_handles[1])
-           self.driver.get("https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB?ceid=US:en&oc=3")
-
-           
