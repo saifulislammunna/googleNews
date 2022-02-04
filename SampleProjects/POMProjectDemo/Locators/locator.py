@@ -13,5 +13,9 @@ class Locators():
    share_link = (By.XPATH, "/html/body/c-wiz[2]/div/div[2]/c-wiz/div/div[1]/div[2]/div[2]/span/div")
    copy_link = (By.XPATH, "/html/body/div[12]/div[2]/div/div/div[3]/div[2]/div[1]")
    facebook_link = (By.XPATH, "//*[@id='yDmH0d']/div[12]/div[2]/div/div/div[3]/div[2]/div[2]")
-   save_later = (By.XPATH, "//*[@id='yDmH0d']/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[1]/div[3]/div/article/div/menu/div")
+   save_later = (By.XPATH, "//*[@id='yDmH0d']/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[1]/div[3]/div/div/article/div/menu/div/div")
    celsius_path = (By.XPATH, "/html/body/c-wiz/div/div[2]/div[2]/div/aside/c-wiz/div/div[1]/div/footer/div/div[1]/button")
+   news_title = (By.XPATH, "//*[@id='yDmH0d']/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[1]/div[3]/div/div/article/a")
+   share_icon = (By.XPATH, "/html/body/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[1]/div[3]/div/div/article/div/menu/span[1]/div")
+   book_icon = (By.XPATH, "/html/body/div[11]/div[2]/div/div/div[3]/div[2]/div[2]/button")
+
